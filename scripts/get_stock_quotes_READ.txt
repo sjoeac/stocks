@@ -1,0 +1,32 @@
+Prometheus and Grafana setup
+-------------------------
+
+wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
+source /etc/lsb-release
+echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+sudo apt-get update && sudo apt-get install influxdb
+sudo service influxdb status
+sudo apt-get update && sudo apt-get install influxdb
+sudo service influxdb status
+sudo service influxdb start
+
+
+
+
+
+
+pip install nsetools
+pip install prometheus_client
+
+
+
+Reference
+---------------
+https://www.influxdata.com/blog/getting-started-python-influxdb/
+
+ 2195  vi /etc/apt/sources.list.d/grafana.list
+ 2196  sudo vi /etc/apt/sources.list.d/grafana.list
+ 2197  curl https://packages.grafana.com/gpg.key | sudo apt-key add -
+ 2198  sudo apt-get update
+ 2199  sudo apt-get install grafana
+
